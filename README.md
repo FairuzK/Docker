@@ -1,6 +1,29 @@
-# 🐳 Docker – Cheat Sheet
+# 🐳 Docker & Why It Matters
+Docker packages an application with everything it needs to run — code, runtime, libraries, system tools — into a single
+image. That image runs as a container: an isolated, lightweight process that behaves the same on your laptop, in CI,
+and in production. This solves the classic “it works on my machine” problem and is foundational to modern DevOps —
+CI/CD pipelines, Kubernetes, and most cloud deployments are built around containers.
+
+
+### **Key concepts:** 
+- **Image:**  A read-only template/blueprint (built from a Dockerfile).
+- **Container:** A running (or stopped) instance of an image.
+- **Dockerfile:** A text file with instructions to build an image.
+- **Registry:**  Where images are stored/shared (Docker Hub, ECR, GCR, etc.).  
+- **Volume:** Persistent storage that outlives a container 
+- **Network:** Virtual network connecting containers.  
+- **Docker Compose:** Tool for defining/running multi-container apps via YAML |
 
 Containerised applications and images I build and ship to **Amazon ECR** and run on **ECS Fargate**.
+
+## 2. Docker Architecture (brief)
+**Docker Client** — the Docker CLI you type commands into
+**Docker Daemon ( dockerd )** — background service that builds/runs/manages containers
+**Docker Registry** — stores images (Docker Hub is the default public one)
+
+Containers share the host’s kernel (unlike VMs, which virtualize an entire OS) — this is why containers are much lighter
+and faster to start than virtual machines.
+
 
 ## What's in this repo
 | Path | Purpose |
